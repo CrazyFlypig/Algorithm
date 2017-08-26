@@ -1,7 +1,5 @@
 package com.xiyou.KnapsackProblem;
 
-import java.net.DatagramPacket;
-
 /**
  * 0-1背包问题
  *

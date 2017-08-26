@@ -1,5 +1,7 @@
 package com.xiyou;
 
+import java.util.Random;
+
 /**
  * 数组工具类
  *
@@ -26,5 +28,17 @@ public class ArrayToolsClass {
             System.out.print(number + " ");
         }
         System.out.println();
+    }
+    public static boolean CheckInvalidArray(int[] numbers,int length){
+        boolean flag = false;
+        if (numbers == null || length <= 0){
+            flag = true;
+        }
+        return flag;
+    }
+    public static int getRandom (int min, int max){
+        Random random = new Random();
+        int result = random.nextInt(max)%(max-min+1) + min;
+        return result;
     }
 }
