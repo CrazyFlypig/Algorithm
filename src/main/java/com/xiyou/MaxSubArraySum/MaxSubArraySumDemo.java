@@ -15,7 +15,7 @@ public class MaxSubArraySumDemo {
         int[] data = {-2,11,-4,13,-5,-2};
         int[] data1 = {1,-2,3,10,-4,7,2,-5};
 //        int result = MathWay(data);
-        int result = DPWay(data,data.length);
+        int result = DPWay(data);
         System.out.println(result);
     }
     /**
@@ -27,7 +27,7 @@ public class MaxSubArraySumDemo {
      * @param array
      * @return
      */
-    public static Integer MathWay(int[] array) {
+    public static int MathWay(int[] array) {
         if (array==null || array.length <= 0){
             return Integer.MIN_VALUE;
         }
@@ -52,10 +52,13 @@ public class MaxSubArraySumDemo {
      * @param length
      * @return
      */
-    public static int DPWay(int[] array , int length){
+    public static int DPWay(int[] array){
+        if (array==null || array.length <= 0){
+            return Integer.MIN_VALUE;
+        }
         int max = array[0];
         int sum = 0;
-        for (int i = 0 ; i < length ; i++){
+        for (int i = 0 ; i < array.length ; i++){
             if (sum > 0){
                 sum += array[i];
             }else {
