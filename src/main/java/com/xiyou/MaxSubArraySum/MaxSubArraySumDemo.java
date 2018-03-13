@@ -1,7 +1,5 @@
 package com.xiyou.MaxSubArraySum;
 
-import com.xiyou.ArrayToolsClass;
-
 /**
  * 最大字段和
  *
@@ -12,7 +10,7 @@ import com.xiyou.ArrayToolsClass;
 
 public class MaxSubArraySumDemo {
     public static void main(String[] args) {
-        int[] data = {-2,11,-4,13,-5,-2};
+        int[] data = {-2,-11,-4,-13,-5,-2};
         int[] data1 = {1,-2,3,10,-4,7,2,-5};
 //        int result = MathWay(data);
         int result = DPWay(data);
